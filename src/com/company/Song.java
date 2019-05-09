@@ -30,6 +30,6 @@ public class Song {
     }
 
     public String display(){
-        return getTitle() + getArtist();
+        return getTitle() + " " + getArtist();
     }
 }

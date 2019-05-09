@@ -9,34 +9,24 @@ public class Main {
 
         ArrayList<Song> songs = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
-        Song s = new Song();
 
-        for (int i = 0; i< 2;i++){
 
+        for (int i = 0; i< 2;i++) {
+
+            Song s = new Song();
             System.out.println("Please enter an artist: ");
-            String Artist = scan.nextLine();
             s.setArtist(scan.nextLine());
             System.out.println(("Please enter a title:"));
-            String Title = scan.nextLine();
             s.setTitle(scan.nextLine());
             songs.add(s);
-
-//            String artist = "Prince";//modify program to prompt user for an artist
-//            String title = "Purple Rain"; //modify program to prompt user for a title
-//
-//            s.setArtist(artist);
-//            s.setTitle(title);
-//            (s);
         }
 
         //print all the songs in the array list
-        for(Song y : songs){
-            System.out.println(y.getTitle());
+        for(Song y : songs) {
+            System.out.println(y.display());
         }
 
-        //look for blue and print if found
-
-        System.out.println("Please enter your song: ");
+        System.out.println("Please enter your title: ");
         String titleToFind = scan.nextLine();
         for (Song y: songs){
             if (y.getTitle().equals(titleToFind)){
